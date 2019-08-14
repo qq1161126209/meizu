@@ -14,7 +14,6 @@
                 <span>7天无理由退货</span>
             </div>
         </div>
-
         <div class="product">
 
             <div class="product_div">
@@ -58,14 +57,16 @@
         </div>
         
         
-    </div>
-
+        </div>
 
     </div>
 </template>
 
 <script>
+
 export default {
-    
+
 }
+
+
 </script>

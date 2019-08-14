@@ -109,18 +109,100 @@
 }
 .d2 .logo2{
     height: 6.25rem;
-    width: 50%;
+    width: 100%;
    
 }
 .d2 .logo3{
     height: 6.25rem;
-    width: 50%;
+    width: 100%;
 }
+
+
+
 .d2 .logo>div{
-    /* float: left; */
-    width: 50%
+    width: 50%;
     display: inline-block;
 }
 .d2 .logo>div>img{
-    display: inline-block
+    display: inline-block;
+    width: 100%;
+}
+.gg>ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #f4f4f4
+}
+.gg>ul>a{
+    width: 49.2%;
+    height: 14.5rem;
+    float: left;
+    text-align: center;
+    margin: .125rem 0;
+    background: #fff
+}
+.gg>ul>a>img{
+    height: 9.375rem;
+}
+.gg>ul>a>h3{
+    color: #333333;
+    font-size: .875rem
+}
+.gg>ul>a>div{
+    width: 90%;
+
+    border: .0625rem solid red;
+    height:1.25rem;
+    overflow: hidden;
+    font-size: .75rem;
+    line-height: 1.25rem;
+    vertical-align:middle;
+    box-sizing: border-box;
+    color: #cc0000;
+    margin: .625rem .3125rem;
+}
+
+.gg>ul>a>div>span{
+  height: 1.25rem;
+font-size: .75rem;
+line-height: 1.25rem;
+font-weight: 700;
+width: 1.25rem;
+background: red;
+color: #fff;
+
+}
+.gg>ul>a>h4{
+    font-size: .875rem;
+    color: #cc0000
+}
+
+.phone_ img{
+    width: 100%
+}
+.phone_{
+    text-align: center
+}
+.phone_ a{
+    color: #000
+}
+.cat_ .left{
+    width: 45%;
+    float: left;
+    display: flex;
+    justify-content: space-around
+}
+.cat_ .right{
+    width: 55%;
+    float: left;
+    display: flex;
+    justify-content: space-around
+}
+.cat_ .right .box1{
+    width: 50%;
+    background: #00c3f5
+}
+.cat_ .right .box2{
+    background: #f0415f;
+    width: 50%;
 }

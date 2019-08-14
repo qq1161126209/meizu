@@ -56,6 +56,8 @@
                     <router-view></router-view> 
 			      <!-- <router-view class='d1' name="d1"></router-view> -->
 			      <router-view class='d2' name="d2"></router-view>
+			      <router-view class='d3' name="d3"></router-view>
+
   </div>
 </template>
 

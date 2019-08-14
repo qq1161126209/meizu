@@ -1,5 +1,5 @@
 {
-  "name": "mi",
+  "name": "hj",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -47,5 +47,18 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "description": "```\r npm install\r ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qq1161126209/meizu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qq1161126209/meizu/issues"
+  },
+  "homepage": "https://github.com/qq1161126209/meizu#readme",
+  "keywords": []
 }
