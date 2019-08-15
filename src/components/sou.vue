@@ -1,6 +1,8 @@
 <template>
     <div>
-        搜索w
+            <router-link to="/">
+             <
+            </router-link>
     </div>
 </template>
 

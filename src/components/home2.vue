@@ -1,5 +1,8 @@
 <template>
      <div class="gg">
+            <div class="title">
+                <h3>智能手机</h3>
+            </div>
             <ul>
                 
                     <router-link :to="{name:'product',query:{id:i}}" v-for="s,i in home.block_317" :key="s.skuid"   >
@@ -25,11 +28,11 @@ export default {
 
   },
     computed: {
-        ...mapActions(['f1']),
+        ...mapActions(['f2']),
         ...mapState(['home']),
     },
     mounted(){
-         this.$store.dispatch('f1')
+         this.$store.dispatch('f2')
     }
 }
 </script>

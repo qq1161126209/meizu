@@ -9,17 +9,20 @@ Vue.use(Vuex,Axios)
 const store = new Vuex.Store({
     // state是一个对象，用来保存所有的应用状态
     state: {
-      home:[],
-      
+      home:{},
+      ids:[],
+      cat:[]
     },
-  
+    mutations:{
+          f1(state, obj){
+            state.home=obj
+          }
+    },
     actions: {
-      f1(){
+      f2(){
         Axios.get("https://easy-mock.com/mock/5d536ee9de7d3605830fc362/example/phone")
         .then((res) => {
-          this.state.home=res.data;
-          console.log(res.data)
-          return res.data
+           store.commit('f1', res.data)
         })
       },
 

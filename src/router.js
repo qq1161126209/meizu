@@ -25,9 +25,8 @@ const  router = new VueRouter({
                 { path:"/",components:{
                     d1:Home,
                     d2:Home1,
-                    d3:Home2
+                    d3:Home2,
                 } },
-                {path:"/Cat",component:Cat},
                 {path:"/phone",component:Phone},
                 {path:"/peijian",component:peijian},
                 {path:"/shengxue",component:shengxue},
@@ -36,6 +35,8 @@ const  router = new VueRouter({
        },
        {path:"/sou",component:Sou},
        {path:"/product",name:"product",component:product},
+       {path:"/cat",component:Cat},
+       
     ]
 })
 
