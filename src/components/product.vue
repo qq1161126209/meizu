@@ -154,13 +154,13 @@ export default {
                         this.home=res.data;
                         if(this.$route.query.id){
                                  var id = this.$route.query.id; 
-                                    this.$store.state.ids.push(id); 
+                                    // this.$store.state.ids.push(id); 
+                                    this.$store.commit('f3', id)
                                     this.id=id;
                         }else{
                              this.id=this.$store.state.ids[this.$store.state.ids.length-1];
                         }
-                        console.log(this.id)
-                        console.log(this.$store.state.ids)  
+                         
                          this.aa= this.home.block_317[this.id]
                             if(this.aa){
                                 this.block1=!this.block1;

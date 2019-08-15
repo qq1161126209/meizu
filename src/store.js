@@ -16,6 +16,10 @@ const store = new Vuex.Store({
     mutations:{
           f1(state, obj){
             state.home=obj
+          },
+          f3(state,id){
+            state.ids.push(id);
+            console.log(state.ids)
           }
     },
     actions: {
