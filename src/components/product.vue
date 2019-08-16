@@ -13,16 +13,15 @@
                         
                         <div class="cont">
                             <a href=''>
-                                <div><img :src="aa.img" alt=""></div>
-                                <h3>{{aa.name}}</h3>
-                                <h4>{{aa.skuprice}}</h4>
+                                <div><img :src="this.cat_page.img" alt=""></div>
+                                <h3>{{this.cat_page.name}}</h3>
+                                <h4>{{this.cat_page.skuprice}}</h4>
                                 <span>分期价:暂无数据</span>
-                                <p>{{aa.title}}</p>
+                                <p>{{this.cat_page.title}}</p>
                             </a>
                     </div>
                         <div>
                             手机信息:无数据
-
                         </div>
                         <div>
                             手机信息:无数据
@@ -103,7 +102,7 @@
                         </div>
                     </div>
                     <div class="right">
-                        <div class="box1" @click="jiaru_cat" >
+                        <div class="box1"  @click="jiaru" >
                             加入购物车
                         </div>
                         <div class="box2">
@@ -123,52 +122,32 @@
     </div>
 </template>
 <script>
-// import { mapState,mapActions } from 'vuex';
+import { mapState,mapActions } from 'vuex';
 var s=[];
 export default {
     data(){
         return{
-            ss:[],
-            aa:[],
-            home:[],
-            block:false,
-            block1:true
+            block:true,
+            block1:false
         }
     },
      methods: {
-         jiaru_cat(){
-             this.$store.state.cat.push(this.$store.state.ids[this.$store.state.ids.length-1])
-             console.log(this.$store.state.cat)
-         }
+        jiaru(){
+            this.$store.commit("jiaru",this.$route.query.id)
+        }
   },
     computed: {
-        // ...mapActions(['f2']),
-        // ...mapState(['home']),
-    },
-   
-    mounted() {
-                
-
-                this.axios.get("https://easy-mock.com/mock/5d536ee9de7d3605830fc362/example/phone")
-                        .then((res) => {
-                        this.home=res.data;
-                        if(this.$route.query.id){
-                                 var id = this.$route.query.id; 
-                                    // this.$store.state.ids.push(id); 
-                                    this.$store.commit('f3', id)
-                                    this.id=id;
-                        }else{
-                             this.id=this.$store.state.ids[this.$store.state.ids.length-1];
-                        }
-                         
-                         this.aa= this.home.block_317[this.id]
-                            if(this.aa){
-                                this.block1=!this.block1;
-                                this.block=!this.block;
-                            }
-                    })
-                     
         
+        ...mapState(['cat_page']),
+    },
+    created(){
+        
+    },
+    mounted() {
+        if(this.$route.query.id){
+                 this.$store.dispatch('f2',this.$route.query.id);   
+        }
+
   }, 
 }
 </script>

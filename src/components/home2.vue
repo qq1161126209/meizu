@@ -5,7 +5,7 @@
             </div>
             <ul>
                 
-                    <router-link :to="{name:'product',query:{id:i}}" v-for="s,i in home.block_317" :key="s.skuid"   >
+ <router-link :to="{name:'product',query:{id:i}}" v-for="s,i in home.block_317" :key="s.skuid"   >
                         <img :src="s.img" alt="" >
                         <h3 className="h3">{{s.name}}</h3>
                         <div>

@@ -20,8 +20,11 @@
                                     @pullingDown="onPullingDown"
                                     @pullingUp="onPullingUp">
                     <ul class="list-content">
-                             <li v-for="item,i in ids" :key='i'>
-                               {{home.block_317}}
+                             <li v-for="s,i in this.cart_page" :key='i' class="cart">
+                                <img :src="s.img" alt="">
+                                <h3>{{s.name}}</h3>
+                                <span>{{s.titel}}</span>
+                                <p class="p1">{{s.skuprice}}</p>
                             </li>
                     </ul>
                 </vue-better-scroll>
@@ -73,29 +76,16 @@ export default {
         items: []
       }
     },
-    
     computed:{
-        　　...mapState(['home','ids','cat'])
-        
+        　　...mapState(['home','ids','cat','jiaru','cart_page'])
     },
     created(){
-      this.$store.dispatch('f2'); 
+        this.$store.dispatch('f2',);  
+        
     },
     mounted() {
-           this.onPullingDown()
-
-            this.home1=(this.$store.state)
-            // this.home1=this.home.block_317;
-            
-            console.log(this.$store.state)
-            console.log(this.$store.state.home)
-
-
-              console.log(this.home);
-
-            
-            // console.log(JSON.stringify([this.home1]))
-            
+           this.onPullingDown();
+           console.log(this.jiaru)
     },
     methods: {
       go(){
