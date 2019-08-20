@@ -28,11 +28,13 @@ export default {
 
   },
     computed: {
-        ...mapActions(['f2']),
+        ...mapActions(['f2','f3']),
         ...mapState(['home']),
     },
     mounted(){
          this.$store.dispatch('f2')
+         
+
     }
 }
 </script>

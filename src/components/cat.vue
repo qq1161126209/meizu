@@ -20,11 +20,18 @@
                                     @pullingDown="onPullingDown"
                                     @pullingUp="onPullingUp">
                     <ul class="list-content">
-                             <li v-for="s,i in this.cart_page" :key='i' class="cart">
+                             <li v-for="s,i in cart_page" :key="i" class="cart">
                                 <img :src="s.img" alt="">
                                 <h3>{{s.name}}</h3>
                                 <span>{{s.titel}}</span>
                                 <p class="p1">{{s.skuprice}}</p>
+                                <div class="div1">
+                                   <button>-</button>
+                                    <span>{{s.num}}</span>
+                                  <button>+</button>
+                                </div>
+                               
+
                             </li>
                     </ul>
                 </vue-better-scroll>
@@ -80,12 +87,11 @@ export default {
         　　...mapState(['home','ids','cat','jiaru','cart_page'])
     },
     created(){
-        this.$store.dispatch('f2',);  
-        
     },
     mounted() {
+        this.$store.dispatch('f2',);  
            this.onPullingDown();
-           console.log(this.jiaru)
+           console.log(this.cart_page)
     },
     methods: {
       go(){
@@ -110,7 +116,7 @@ export default {
       },
       onPullingDown() {
         // 模拟下拉刷新
-        console.log('下拉刷新')
+        // console.log('下拉刷新')
         count = 0
         this.getData().then(res => {
           this.items = res

@@ -279,4 +279,4 @@ color: #fff;
 .cart img{width: 4.375rem;position: absolute;left:15%;top: 0.95rem}
 .cart>h3{text-align: center;position: absolute;left: 45%;top: 1.875rem}
 .cart>.p1{text-align: center;position: absolute;left: 45%;top: 2.875rem}
-
+.cart>.div1{position: absolute;right: 0rem;bottom:0rem}

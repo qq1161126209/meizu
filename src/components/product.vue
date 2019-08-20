@@ -13,77 +13,13 @@
                         
                         <div class="cont">
                             <a href=''>
-                                <div><img :src="this.cat_page.img" alt=""></div>
-                                <h3>{{this.cat_page.name}}</h3>
-                                <h4>{{this.cat_page.skuprice}}</h4>
+                                <div><img :src="this.product_page.img" alt=""></div>
+                                <h3>{{this.product_page.name}}</h3>
+                                <h4>{{this.product_page.skuprice}}</h4>
                                 <span>分期价:暂无数据</span>
-                                <p>{{this.cat_page.title}}</p>
+                                <p>{{this.product_page.title}}</p>
                             </a>
-                    </div>
-                        <div>
-                            手机信息:无数据
-                        </div>
-                        <div>
-                            手机信息:无数据
-
-                        </div> <div>
-                            手机信息:无数据
-
-                        </div> <div>
-                            手机信息:无数据
-
-                        </div> <div>
-                            手机信息:无数据
-
-                        </div> <div>
-                            手机信息:无数据
-
-                        </div> <div>
-                            手机信息:无数据
-
-                        </div> <div>
-                            手机信息:无数据
-
-                        </div> <div>
-                            手机信息:无数据
-
-                        </div> <div>
-                            手机信息:无数据
-
-                        </div> <div>
-                            手机信息:无数据
-
-                        </div> <div>
-                            手机信息:无数据
-
-                        </div> <div>
-                            手机信息:无数据
-
-                        </div> <div>
-                            手机信息:无数据
-
-                        </div> <div>
-                            手机信息:无数据
-
-                        </div> <div>
-                            手机信息:无数据
-
-                        </div> <div>
-                            手机信息:无数据
-
-                        </div> <div>
-                            手机信息:无数据
-
-                        </div> <div>
-                            手机信息:无数据
-
-                        </div> <div>
-                            手机信息:无数据
-
-                        </div> <div>
-                            手机信息:无数据
-
-                        </div>
+                    </div>           
                 <div class="cat_">
                     <div class="left">
                         <div class="box">
@@ -102,7 +38,7 @@
                         </div>
                     </div>
                     <div class="right">
-                        <div class="box1"  @click="jiaru" >
+                        <div class="box1"  @click="jiaru(router1)" >
                             加入购物车
                         </div>
                         <div class="box2">
@@ -117,37 +53,37 @@
             </div>
 
 
-    
-
     </div>
 </template>
 <script>
-import { mapState,mapActions } from 'vuex';
+import { mapState,mapActions,mapMutations } from 'vuex';
 var s=[];
 export default {
     data(){
         return{
             block:true,
-            block1:false
+            block1:false,
+            router1:0
         }
     },
      methods: {
-        jiaru(){
-            this.$store.commit("jiaru",this.$route.query.id)
-        }
+        
+         ...mapMutations(["jiaru"])
   },
     computed: {
+        ...mapState(['product_page']),
         
-        ...mapState(['cat_page']),
     },
     created(){
-        
+        // this.$store.dispatch('f2')        
     },
     mounted() {
-        if(this.$route.query.id){
-                 this.$store.dispatch('f2',this.$route.query.id);   
-        }
-
+        this.$store.dispatch('f2',this.$route.query.id)
+        .then(res=>{
+            // console.log(this.$store.state.product_page)
+            this.router1=this.$store.state.product_page.skuid
+        }) 
+        
   }, 
 }
 </script>
