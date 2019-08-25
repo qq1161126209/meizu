@@ -10,6 +10,11 @@ import peijian from './components/peijian.vue';
 import shengxue from './components/shengxue.vue';
 import life from './components/life.vue';
 import product from './components/product.vue';
+import user from './components/user.vue';
+import zhifu from './components/zhifu.vue';
+
+
+
 
 
 
@@ -27,7 +32,9 @@ const  router = new VueRouter({
                     d2:Home1,
                     d3:Home2,
                 } },
-                {path:"/phone",component:Phone},
+                {path:"/phone",components:{
+                    d3:Home2,
+                }},
                 {path:"/peijian",component:peijian},
                 {path:"/shengxue",component:shengxue},
                 {path:"/life",component:life},
@@ -36,6 +43,9 @@ const  router = new VueRouter({
        {path:"/sou",component:Sou},
        {path:"/product",name:"product",component:product},
        {path:"/cat",component:Cat},
+       {path:"/user",component:user},
+       {path:"/zhifu",component:zhifu},
+
        
     ]
 })

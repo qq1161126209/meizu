@@ -1,15 +1,20 @@
 <template>
 
-    <div>
+    <div class="big">
 
-                <div class="cat_head">
+                
+
+                <div class="hua">
+                      <div class="cat_head">
                         <h2  @click="go" >
                             <
                          </h2>
                          <h3>购物车</h3>
                          <span>编辑</span>                          
                     </div>
-                <div>
+                 <div class="cart_kong" v-if="cart">
+                    您的购物车空空如也
+                  </div>
                         <main class="position-box">  <!-- 需要一个创建一个父容器 组件高度默认等于父容器的高度 -->
                 <vue-better-scroll class="wrapper"
                                     ref="scroll"
@@ -19,16 +24,16 @@
                                     :startY="parseInt(startY)"
                                     @pullingDown="onPullingDown"
                                     @pullingUp="onPullingUp">
-                    <ul class="list-content">
-                             <li v-for="s,i in cart_page" :key="i" class="cart">
+                    <ul class="list-content" >
+                             <li v-for="s,i in cart_page" :key="i" class="cart" >
                                 <img :src="s.img" alt="">
                                 <h3>{{s.name}}</h3>
                                 <span>{{s.titel}}</span>
                                 <p class="p1">{{s.skuprice}}</p>
                                 <div class="div1">
-                                   <button>-</button>
+                                   <button @click="decrease(s.skuid)">-</button>
                                     <span>{{s.num}}</span>
-                                  <button>+</button>
+                                  <button @click="increase(s.skuid)">+</button>
                                 </div>
                                
 
@@ -36,6 +41,14 @@
                     </ul>
                 </vue-better-scroll>
                 </main>
+                <div class="cart_total ">
+                    <h2> 总价：{{totalPrice}}</h2>
+                      <router-link to="/user">
+                        结算
+                      </router-link>
+                </div>
+
+                
                 
             </div>
                     
@@ -48,9 +61,9 @@
 
 <script>
 import VueBetterScroll from 'vue2-better-scroll';
-import {mapState} from 'vuex'
+import {mapState,mapMutations,mapGetters} from 'vuex'
     let count = 1
-
+  
 export default {
  
   
@@ -58,7 +71,7 @@ export default {
     components: { VueBetterScroll },
     data() {
       return {
-        home1:{},
+        cart:false,
         // 这个配置可以开启滚动条，默认为 false。当设置为 true 或者是一个 Object 的时候，都会开启滚动条，默认是会 fade 的
         scrollbarObj: {
           fade: true
@@ -84,7 +97,11 @@ export default {
       }
     },
     computed:{
-        　　...mapState(['home','ids','cat','jiaru','cart_page'])
+        　　...mapState(['home','ids','cat','jiaru','cart_page']),
+        ...mapGetters(["totalPrice"]),
+          
+
+        
     },
     created(){
     },
@@ -92,8 +109,11 @@ export default {
         this.$store.dispatch('f2',);  
            this.onPullingDown();
            console.log(this.cart_page)
+           
+           
     },
     methods: {
+      ...mapMutations(["increase","decrease"]),
       go(){
             // console.log(1)
             this.$router.go(-1)
@@ -149,5 +169,6 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
+    background: #EEEEEE
   }
 </style>

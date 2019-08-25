@@ -275,8 +275,109 @@ color: #fff;
 
 }
 
-.cart{height: 6.25rem;position: relative}
+.cart{height: 6.25rem;position: relative;background: #fff;margin-top: .625rem}
 .cart img{width: 4.375rem;position: absolute;left:15%;top: 0.95rem}
 .cart>h3{text-align: center;position: absolute;left: 45%;top: 1.875rem}
 .cart>.p1{text-align: center;position: absolute;left: 45%;top: 2.875rem}
 .cart>.div1{position: absolute;right: 0rem;bottom:0rem}
+
+.log1>img{
+    width: 100%
+}
+.cart_total{
+    position: fixed;
+    bottom: 0rem;
+    height: 2.5rem;
+}
+.cart_total {
+    background: #fff;
+    width: 100%;
+    position: fixed;
+}
+.cart_total>a{
+    display: inline-block;
+    position: absolute
+}
+
+.cart_total>a{
+    right: 0;
+    width: 30%;
+    height: 100%;
+    line-height: 2.5rem;
+    background: #f0415f;
+    color: #fff;
+    text-align: center;
+    font-size: .75rem
+}
+
+.cart_total>h2{
+    float: left;
+    color: #f0415f;
+    line-height: 2.5rem;
+    
+    
+    
+}
+.yanzhengma{
+    display: flex;
+    justify-content: space-around;
+    margin: 5rem 1.40625rem 0;
+}
+.yanzhengma>div{
+    color: #7f7f7f
+}
+
+.cart_kong{
+    margin: 6.25rem auto;
+    text-align: center;
+    color: #00b4ff
+}
+
+.router-link-exact-active{
+    color: #0bbbef !important
+}
+.form{
+    color: #00b4ff;
+    font-size: .75rem
+}
+.input_1{
+    margin: 1.25rem 1rem;
+    padding: .3125rem;
+    margin-right: 0
+}
+.input_2{
+    margin: 1.25rem 1.65rem;
+    padding: .3125rem;
+    margin-right: 0
+}
+#s-canvas{
+    margin: 0 auto
+}
+.mmm{
+    height:2.6875rem;float: left;width: 50%;
+    line-height: 1.875rem
+}
+.inp3{
+    width: 90%;
+    margin:30px 5%;
+    height: 1.875rem;
+    display: block;
+    font-size: 14px;
+    line-height: 1.875rem;
+    text-align: center;
+    margin-bottom: 10px;
+    outline: none!important;
+    cursor: pointer;
+    background-color: #32a5e7;
+    color: #fff;
+    border-radius: 4px;
+}
+.zhao{
+    width: 100%;
+    height: 2.5rem;
+    position: absolute;
+    z-index: 100;
+    background: #7f7f7f;
+    opacity: .6;
+    margin-top: 1.25rem
+}

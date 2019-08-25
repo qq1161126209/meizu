@@ -31,7 +31,7 @@
               </ul>
            </div>
 
-
+          
 
            
   <swiper :options="swiperOption" ref="mySwiper" @slideChangeTransitionEnd="slideChangeEnd">
