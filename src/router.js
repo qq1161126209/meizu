@@ -12,6 +12,8 @@ import life from './components/life.vue';
 import product from './components/product.vue';
 import user from './components/user.vue';
 import zhifu from './components/zhifu.vue';
+import dizhi from './components/dizhi.vue';
+
 
 
 
@@ -45,6 +47,8 @@ const  router = new VueRouter({
        {path:"/cat",component:Cat},
        {path:"/user",component:user},
        {path:"/zhifu",component:zhifu},
+       {path:"/dizhi",component:dizhi},
+
 
        
     ]

@@ -25,6 +25,11 @@ Vue.use(VueAwesomeSwiper, /* { default global options } */)
 import 'swiper/dist/css/swiper.css'
 
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+
+Vue.use(ElementUI);
 
 
 new Vue({

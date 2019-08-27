@@ -1,5 +1,11 @@
+html,body{
+    height: 100%;
+}
 #app{
-    width: 100%
+    width: 100%;
+ min-height: 100%;
+ /* background: #f2f2f2 */
+
 }
 
 .header>div{
@@ -321,7 +327,7 @@ color: #fff;
 .yanzhengma{
     display: flex;
     justify-content: space-around;
-    margin: 5rem 1.40625rem 0;
+    padding: 5rem 1.40625rem 0;
 }
 .yanzhengma>div{
     color: #7f7f7f
@@ -380,4 +386,110 @@ color: #fff;
     background: #7f7f7f;
     opacity: .6;
     margin-top: 1.25rem
+}
+.header1{
+    position: relative;
+}
+.header1 h1{
+    /* display: inline-block; */
+    position: absolute;
+    font-size: 1.875rem;
+    left: 1.5625rem;
+    line-height: 1.875rem;
+    left: .9375rem;
+    color: #666666;
+    
+
+}
+.header1 h2{
+    text-align: center;
+    line-height: 1.875rem;
+    font-size: 1.125rem;
+    color: #666666;
+    border-bottom: .0625rem solid #ddd
+}
+
+.dizhi{
+    border-top: .0625rem solid #999999;
+    position: relative;
+    height: 3.125rem;
+}
+.dizhi>div{
+    font-size: .875rem;
+    margin-top: .625rem
+}
+.dizhi>a{
+    position: absolute;
+    right: 0;
+    font-size: .875rem
+}
+.uu{
+    position: relative;
+    content: "";
+    display: block;
+    height: 5px;
+    background-image: linear-gradient(135deg,#82c9ff 8px,transparent 0,transparent 16px,#ff8282 0,#ff8282 32px,transparent 0,transparent 0,transparent 40px,#82c9ff 0,#82c9ff);
+    background-color: #fff;
+    background-size: 68px 5px;
+   margin-top: 1.225rem!important;
+}
+.dizhi>a{
+    display: block
+}
+.dizhi_inp input{
+    width: 100%;
+    line-height: .66672rem;
+    padding: .38892rem .16668rem .33336rem;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+}
+.dizhi_inp{
+    height: 100%;
+}
+.section{
+    padding: 0 .44448rem;
+    background-color: #fff;
+}
+.section>div{
+    border-bottom: .0625rem solid #ddd!important;
+    width: 100%;
+    line-height: 1.66672rem;
+    padding: .38892rem .16668rem .33336rem;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+
+}
+.section>div>span{
+    color: #82c9ff;
+    font-size: .5625rem
+}
+.city{
+    color:#333
+}
+.bull{
+    position: absolute;
+    width: 100%;
+    height: 3.125rem;
+    background: #82c9ff;
+    opacity: .4;
+    margin-top: 1.25rem;
+    z-index: 100;
+}
+.tijiao{
+   margin: 1.25rem;
+   text-align: center
+}
+.spano{
+    color: #333;
+    float: right;
+}
+.po{
+    color: #333;
+    font-size: .5625rem;
+    position: absolute
+}
+.zhifu_cart img{
+    width: 100%
 }

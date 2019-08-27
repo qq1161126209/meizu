@@ -14,7 +14,9 @@ const store = new Vuex.Store({
       product_page:[],
       jiaru:[],
       cart_page:[],
-      user:"1"
+      user:"",
+      city:"",
+      user_xx:[]
     },
     mutations:{
         f0(state,val){
@@ -36,7 +38,15 @@ const store = new Vuex.Store({
                     state.product_page=ids
                   }
               }
-           
+          },
+          city(state,c){
+            console.log(c)
+            this.state.city=c;
+
+          },
+          f11(state,arr){
+            console.log(arr)
+            this.state.user_xx=arr
           },
 
           jiaru(state,id){       

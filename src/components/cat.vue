@@ -1,9 +1,6 @@
 <template>
 
-    <div class="big">
-
-                
-
+    <div class="big">                
                 <div class="hua">
                       <div class="cat_head">
                         <h2  @click="go" >
@@ -36,7 +33,6 @@
                                   <button @click="increase(s.skuid)">+</button>
                                 </div>
                                
-
                             </li>
                     </ul>
                 </vue-better-scroll>
