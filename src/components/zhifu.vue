@@ -29,15 +29,61 @@
                         <div class="zhifu_cart">
                             <ul>
                                 <li v-for="j in cart_page" key="j.skuid">
-                                    <h3>{{j.name}}</h3>
-                                    <h4>{{j.title}}</h4>
-                                    <span>{{j.skuprice}}</span>
-                                           <img :src="j.img" alt="">
+                                    <div class="da">
+                                        <h3>{{j.name}}</h3>
+                                        <h4>{{j.title}}</h4>
+                                        <span>{{j.skuprice}}</span>
+                                    </div>
+                                    <div class="di">X {{j.num}}</div>
+                                    <img :src="j.img" alt="">
                                 </li>
                             </ul>
                             
                         </div>
-           
+                        <div class="peisong">
+                            <ul>
+                                <li>
+                                    <span>配送方式</span>
+                                    <i>快递配送(运费0)</i>
+                                </li>
+                                <li>
+                                    <span>发票类型</span>
+                                    <p>电子发票</p>
+                                </li>
+                                <li>
+                                    <span>发票抬头</span>
+                                    <p>个人</p>
+                                </li>
+                                <li>
+                                    <span>抬头全称</span>
+                                    <p>{{user_xx[0]}}</p>
+                                </li>
+                                <li>
+                                    <span>买家留言</span>
+                                    <input type="text">
+                                </li>
+                                <div>
+                                    <span>共{{}}件商品</span>
+                                    <i>合计:￥{{}}</i>
+                                </div>
+                                 <li>
+                                    <span>回购金</span>
+                                    <p>未使用></p>
+                                </li>
+                                 <li>
+                                    <span>礼品卡</span>
+                                    <p>></p>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="cart_total ">
+                            <h2> 总价：{{totalPrice}}</h2>
+                            <router-link to="/zhifubao">
+                                结算
+                            </router-link>
+                        </div>
+                
     </div>
 </template>
 <script>

@@ -490,6 +490,74 @@ color: #fff;
     font-size: .5625rem;
     position: absolute
 }
+.zhifu_cart ul li{
+    height: 5rem;
+    
+    position: relative;
+    z-index: 0;
+    margin: 0 .33333rem;
+    padding: .33333rem 0;
+    overflow: hidden;
+}
+.zhifu_cart{
+    margin-top: 1.25rem
+}
 .zhifu_cart img{
-    width: 100%
+    width: 5.125rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.zhifu_cart ul li>.da{
+    position: absolute;
+    left: 5rem;
+}
+
+.zhifu_cart ul li>div h4{
+    color: #999999;
+}
+.zhifu_cart ul li>.di{
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.peisong ul li{
+    height: 2.5rem;
+    margin: 0 .33333rem;
+    line-height: 2.5rem
+}
+.peisong ul li span{
+    color: #999999;
+    font-size: .75rem
+}
+.peisong ul li i{
+    color: #333;
+    font-size: .75rem;
+    margin-left: 1.25rem
+}
+.peisong ul li p{
+    display: inline-block;
+    color: #333;
+    font-size: .75rem;
+    float: right;
+}
+.peisong ul li input{
+    border: 0;
+    margin: 0 1.25rem!important
+}
+.peisong>ul>div{
+    height: 1.875rem;
+    position: relative;
+}
+.peisong>ul>div>span,i{
+    color: #333;
+    font-size: .75rem;
+    position: absolute;
+    right: 0;
+    
+    
+}
+.peisong>ul>div>span{
+    right: 3.75rem
 }

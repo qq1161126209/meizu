@@ -13,6 +13,8 @@ import product from './components/product.vue';
 import user from './components/user.vue';
 import zhifu from './components/zhifu.vue';
 import dizhi from './components/dizhi.vue';
+import zhifubao from './components/zhifubao.vue';
+
 
 
 
@@ -48,6 +50,8 @@ const  router = new VueRouter({
        {path:"/user",component:user},
        {path:"/zhifu",component:zhifu},
        {path:"/dizhi",component:dizhi},
+       {path:"/zhifubao",component:zhifubao},
+
 
 
        
