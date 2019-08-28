@@ -39,10 +39,15 @@
                     </div>
                     <div class="right">
                         <div class="box1"  @click="jiaru(router1)" >
-                            加入购物车
+                            <el-button type="text" @click="open">
+                                    加入购物车
+                            </el-button>
+                            
                         </div>
                         <div class="box2">
-                            立即购买
+                            <router-link to="/user">
+                                结算
+                            </router-link>
                         </div>
                                                     
                     </div>
@@ -67,7 +72,17 @@ export default {
         }
     },
      methods: {
-        
+         open() {
+        this.$alert('成功加入购物车',  {
+          confirmButtonText: '确定',
+          callback: action => {
+            this.$message({
+              type: 'info',
+              message: `action: ${ action }`
+            });
+          }
+        });
+      },
          ...mapMutations(["jiaru"])
   },
     computed: {

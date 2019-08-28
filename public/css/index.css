@@ -168,7 +168,9 @@ html,body{
     color: #cc0000;
     margin: .625rem .3125rem;
 }
-
+.el-message--info{
+    display: none!important;
+}
 .gg>ul>a>div>span{
   height: 1.25rem;
 font-size: .75rem;
@@ -281,7 +283,11 @@ color: #fff;
     font-weight: 700
 
 }
-
+.el-message-box{
+    display: flex!important;
+    width: 100%!important;
+    margin-top: 300px
+}
 .cart{height: 6.25rem;position: relative;background: #fff;margin-top: .625rem}
 .cart img{width: 4.375rem;position: absolute;left:15%;top: 0.95rem}
 .cart>h3{text-align: center;position: absolute;left: 45%;top: 1.875rem}

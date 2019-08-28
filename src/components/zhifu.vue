@@ -82,7 +82,11 @@
                         </div>
                         <div class="cart_total ">
                             <h2> 总价：{{totalPrice}}</h2>
-                            <div class="aa" v-if="this.kk" @click="ll()"></div>
+                            
+                                <el-button type="text" @click="open"  class="aa" v-if="this.kk" >
+                                   
+                                </el-button>
+                            
                             <router-link to="/zhifubao">
                                 结算
                             </router-link>
@@ -101,6 +105,17 @@ export default {
         }
     },
     methods:{
+         open() {
+        this.$alert('请填写收获地址或加入商品到购物车',  {
+          confirmButtonText: '确定',
+        //   callback: action => {
+        //     this.$message({
+        //       type: 'info',
+        //       message: `action: ${ action }`
+        //     });
+        //   }
+        });
+      },
         go(){
             // console.log(1)
             this.$router.go(-1)
