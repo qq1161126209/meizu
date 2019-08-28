@@ -573,3 +573,36 @@ color: #fff;
     font-size: .75rem;
     z-index: 10;
 }
+.s .sty{
+    color: #999;
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    font-size: 1.875rem;
+    margin: .625rem 1.25rem
+}
+.s{
+    position: relative;
+}
+.s input{
+    position: absolute;
+    top: 0;
+    left:3.75rem;
+    height: 30px;
+    padding: 1.66667vw 9.16667vw 1.66667vw 8.33333vw;
+    color: #666;
+    font-size: 14px;
+    border: none;
+    border-radius: 16px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: #eee;
+}
+.s span{
+    position: absolute;
+    right: .9375rem;
+    font-size: .75rem;
+    top:3px;
+    color: #666666;
+}
