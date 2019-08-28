@@ -3,7 +3,7 @@
       <div class="header">
         <div class="box_left">
           <router-link to="/sou">
-            <i class="iconfont icon-fangdajing"></i>
+            <i class="iconfont icon-fangdajing ii"></i>
           </router-link>
         </div>
 
