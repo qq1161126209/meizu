@@ -1,5 +1,43 @@
 <template>
-<div class="banner">   
+<div class="banner">
+      <transition name="el-zoom-in-top">
+        <div v-show="show2" class="transition-box">
+          <div class="alll">
+              <h2>魅族官网</h2>
+              <span @click="show2 = !show2">x</span>
+          </div>
+          <div class="vbox">
+            <ul>
+              <li v-for="s,i in home.block_206" :key="i">
+                    <div>
+                      <img :src="s.img" alt="">
+                      <span>{{s.name}}</span>
+                    </div>
+              </li>
+            </ul>
+          </div>
+          <div class="vbox">
+            <ul>
+              <li v-for="s,i in home.block_208" :key="i">
+                    <div>
+                      <img :src="s.img" alt="">
+                      <span>{{s.name}}</span>
+                    </div>
+              </li>
+            </ul>
+          </div>
+          <div class="vbox">
+            <ul>
+              <li v-for="s,i in home.block_314" :key="i">
+                    <div>
+                      <img :src="s.img" alt="">
+                      <span>{{s.name}}</span>
+                    </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </transition>
       <div class="header">
         <div class="box_left">
           <router-link to="/sou">
@@ -11,9 +49,10 @@
           <a href="#">MEIZU</a>
         </div>
         <div>
-             <router-link to="/">
-              <i class="iconfont icon-diandiandianshu"></i>
-            </router-link>
+            
+             <el-button class="button" @click="show2 = !show2"><i class="iconfont icon-diandiandianshu"></i></el-button>
+              
+            
           <router-link to="/Cat">
             <i class="iconfont icon-gouwuche"></i>
           </router-link>
@@ -62,11 +101,13 @@
 </template>
 
 <script>
+import { mapState,mapActions } from 'vuex';
   export default {
     name: 'carrousel',
     data() {
     const that = this;
     return {
+      show2: false,
       imgIndex: 1,
       swiperOption: {
         //是一个组件自有属性，如果notNextTick设置为true，组件则不会通过NextTick来实例化swiper，也就意味着你可以在第一时间获取到swiper对象，假如你需要刚加载遍使用获取swiper对象来做什么事，那么这个属性一定要是true
@@ -108,7 +149,8 @@
     computed: {
       swiper() {
         return this.$refs.mySwiper.swiper
-      }
+      },
+      ...mapState(['home']),
     },
     mounted() {
       // current swiper instance

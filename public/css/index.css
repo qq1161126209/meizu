@@ -5,9 +5,65 @@ html,body{
     width: 100%;
  min-height: 100%;
  /* background: #f2f2f2 */
+ /* position: relative; */
 
 }
+.transition-box{
+    position: fixed;
+    min-height: 100%;
+    width: 100%;
+    background: #fafafa;
+    z-index: 10000;
+}
+.alll{
+    
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.alll h2{text-align: center;line-height: 3.125rem;}
+.alll span{
+    position: absolute;
+    right:1rem;
+    top: .9rem
+}
+.vbox{
+    display: block;
+    margin: .625rem 0
+}
+.vbox ul{
+    display: block
+}
+.vbox ul li{
+    /* float: left; */
+    display: inline-block;
+    width: 25%;
+    margin: .625rem 0
 
+}
+.vbox ul li img{
+    width: 2.5rem
+}
+.vbox ul li>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+.vbox ul li>div>span{
+    font-size: .75rem;
+    color: #000
+}
+
+.button{
+    float: right;
+    border: 0!important;
+    background: #fff !important;
+    
+}
+.button i{
+    
+    line-height: 2rem;
+}
 
 .header>div{
     width: 33.3333333%;
